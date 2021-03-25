@@ -17,11 +17,31 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    text-decoration: none;
+    list-style: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Chango&family=Dela+Gothic+One&family=New+Tegomin&display=swap');
+.hamburguer{
+    /* background-color: red; */
+    width: 2rem;
+    height: 2rem;
+    overflow: hidden;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
 
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css);
+.line{
+    width: 100%;
+    height: .1rem;
+    background-color: white;
+    box-shadow: 0.1rem 0.1rem black ;
+}
 
 header{
     width: 100%;
@@ -40,7 +60,7 @@ header{
     height: 100%;
     object-fit: cover;
     opacity: 0.5;
-    animation: zoom duration timing-function delay iteration-count direction fill-mode;
+    animation: zoom 25s;
 }
 @keyframes zoom{
     0%{
@@ -63,6 +83,34 @@ header{
     font-family: 'dela gothic one', serif;
     font-weight: 200;
     text-shadow: .3rem .4rem 5px rgba(0, 0, 0, 0.2);
+    animation: flip 1s 0.5s forwards;
+    opacity: 0;
+}
+@keyframes flip{
+    0%{
+        transform: translateY(4rem) rotatex(-400deg);
+    }
+    100%{
+        transform: translateY(0) rotatex(0);
+        opacity: 1;
+    }
+}
+.sidebar{
+    width: 20rem;
+    height: 100vh;
+    background-color: rgb(255, 0, 0);
+    position: fixed;
+    top: 0;
+    right: 0;
+};
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.menu-item{
+    text text-align: ;: center;
 }
 .banner p{
     color: rgb(235, 235, 235);
@@ -71,7 +119,9 @@ header{
     font-weight: 100;
     text-shadow: .3rem .4rem 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
-}
+    animation: flip 1s 0.7s forwards;
+    opacity: 0;
+};
 
 .banner button{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -84,8 +134,8 @@ header{
     padding: 1rem 3rem;
     border: none;
     border-radius: 10px;
-    Cursor: Pointer;        
+    Cursor: Pointer; 
+    animation: flip 1s 0.9s forwards;
+    opacity: 0;       
 };
 
-
-     
