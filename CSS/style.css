@@ -1,6 +1,4 @@
-html,
-body,
-div,
+html, body, div,
 span,
 applet,
 object,
@@ -87,6 +85,7 @@ video {
   vertical-align: baseline;
   text-decoration: none;
   list-style: none;
+  outline: none;
 }
 textarea:focus,
 input:focus,
@@ -388,11 +387,11 @@ header {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
-  transition: all .3;
+  transition: all 0.3;
 }
 
-.card:hover .card-img-wrapper img{
-    opacity: .3;
+.card:hover .card-img-wrapper img {
+  opacity: 0.3;
 }
 
 .card-info {
@@ -402,7 +401,7 @@ header {
   bottom: 0;
   padding: 2rem;
   text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.473);
-transition: all .5s;
+  transition: all 0.5s;
 }
 
 .card:hover .card-info {
@@ -459,22 +458,121 @@ transition: all .5s;
   box-shadow: 0 0.1rem 0.8rem rgba(61, 61, 61, 0.4);
 }
 
-.sessao-contato{
-    width: 100%;
-    height: 100vh;
-    background-color: #222222;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.sessao-contato {
+  width: 100%;
+  height: 100vh;
+  background-color: #272727;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.contato-wrapper{
-    width: 60%;
-    display: flex;
+.contato-wrapper {
+  width: 60%;
+  height: 30rem;
+  display: flex;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
 }
 
-.contato-left{
-    width: 35%;
-    background-image: url(img/contato.png);
-    background-size: cover;
+.contato-left {
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)),
+    url(IMG/contato.jpg);
+  background-size: cover;
 }
+
+.contato-right {
+  width: 65%;
+  background-color: #eee;
+  padding: 1rem 3rem 3rem 3rem;
+}
+
+.sessao-contato h1 {
+  font-family: "dela gothic one", serif;
+  font-size: 2rem;
+  font-weight: lighter;
+  color: #222222;
+}
+
+.sessao-contato form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field {
+  background: transparent;
+  border: none;
+  width: 15rem;
+  height: 5rem;
+  font-size: 1rem;
+  border-bottom: 1px dashed gray;
+}
+
+.input-group {
+  position: relative;
+}
+.input-group textarea {
+  padding-top: 1.2rem;
+  max-width: 30rem;
+  min-width: 15rem;
+  max-height: 10rem;
+  min-height: 5rem;
+}
+
+.field-label {
+  position: absolute;
+  left: -5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  top: 2rem;
+  font-size: .8rem;
+  visibility: visible;
+}
+
+.field:focus ~label {
+  top: 0;
+  font-size: 1;
+  transition: all 0.3s;
+}
+
+.btn-submit {
+  text-transform: uppercase;
+  width: 100%;
+  height: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: beige;
+  background: #aa076b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #61045f,
+    #aa076b
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #61045f,
+    #aa076b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 0.3rem;
+  border: none;
+  box-shadow: 0 0.1rem 0.8rem rgba(61, 61, 61, 0.4);
+}
+/* 
+footer{
+  width: 100%;
+  height: 7rem;
+  background-color: #272727;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-content{
+width: 60%;
+display: flex;
+justify-content: space-between;
+} */
