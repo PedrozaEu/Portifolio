@@ -86,6 +86,7 @@ video {
   text-decoration: none;
   list-style: none;
   outline: none;
+  scroll-behavior: smooth;
 }
 textarea:focus,
 input:focus,
@@ -230,6 +231,7 @@ header {
   top: 0;
   right: -20rem;
   transition: all 0.2s;
+  z-index: 150;
 }
 .show-menu .sidebar {
   right: 0rem;
@@ -365,13 +367,15 @@ header {
 
 .projetos {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  
 }
 
 .card {
   width: 15rem;
   height: 20rem;
   position: relative;
+  padding-left: 2rem;
   /* padding-bottom: 2rem; */
 }
 
@@ -562,7 +566,7 @@ header {
   border: none;
   box-shadow: 0 0.1rem 0.8rem rgba(61, 61, 61, 0.4);
 }
-/* 
+
 footer{
   width: 100%;
   height: 7rem;
@@ -575,4 +579,21 @@ footer{
 width: 60%;
 display: flex;
 justify-content: space-between;
-} */
+}
+
+.footer-content p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: silver;
+  font-size:1rem;
+}
+
+.social-list a{
+margin: 0 2rem;
+color: silver;
+font-size: 1.5rem;
+}
+
+.social-list ul{
+  display: flex;
+
+}
