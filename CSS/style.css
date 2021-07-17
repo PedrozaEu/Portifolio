@@ -117,11 +117,38 @@ select:focus {
   right: 16rem;
 }
 
+/* .hamburguer span{
+  position: absolute;
+  left: 3rem;
+  height: 2rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a044ff;
+  color: #ffffff;
+  font-family: var(--font-action);
+  opacity: 0;
+}
+
+.hamburguer span::before{
+  content: "";
+  position: absolute;
+  border-right: .5rem solid #a044ff;
+  border-top: .5rem solid transparent;
+  border-left: .5rem solid transparent;
+  border-bottom: .5rem solid transparent;
+  left: -1rem;
+}
+
+.show-menu .hamburguer:hover span{
+  opacity: 1;} */
+
 .line {
   width: 100%;
   height: 0.1rem;
-  background-color: white;
-  box-shadow: 0.1rem 0.1rem black;
+  background-color: silver;
+  box-shadow: 0.01rem 0.01rem black;
   transition: transform 1s;
 }
 
@@ -129,11 +156,12 @@ select:focus {
   opacity: 0;
 }
 .show-menu #line1 {
-  transform: rotate(45deg) translate(1rem, 0.4rem);
+  transform: translate(0.2rem, .5rem) rotate(45deg);
 }
 .show-menu #line3 {
-  transform: rotate(-45deg);
+  transform: translate(.2rem, -.5rem) rotate(-45deg);
 }
+
 
 header {
   width: 100%;
@@ -231,10 +259,10 @@ header {
   top: 0;
   right: -20rem;
   transition: all 0.2s;
-  z-index: 150;
+  z-index: 1px;
 }
 .show-menu .sidebar {
-  right: 0rem;
+  right: 0;
 }
 .menu {
   position: absolute;
@@ -312,9 +340,8 @@ header {
   grid-row: 5/-1;
 }
 
-/* .sessao-conhecimentos {
-  background-color: lightgray;
-} */
+.sessao-conhecimentos {
+  padding-bottom: 6rem;} 
 .sessao-header {
   display: flex;
   align-items: center;
@@ -365,10 +392,15 @@ header {
   border-radius: 1rem;
 }
 
+/* .sessao-projetos{
+  padding-top: 2rem, ;
+  padding-bottom: 2rem, ;
+} */
+
 .projetos {
   display: flex;
   justify-content: center;
-  
+  padding-bottom: 2rem;
 }
 
 .card {
@@ -489,7 +521,7 @@ header {
 .contato-right {
   width: 65%;
   background-color: #eee;
-  padding: 1rem 3rem 3rem 3rem;
+  /* padding: 1rem 3rem 3rem 3rem; */
 }
 
 .sessao-contato h1 {
@@ -597,3 +629,15 @@ font-size: 1.5rem;
   display: flex;
 
 }
+
+.dados-de-contato a{
+  color:#272727;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  margin: top 5rem;
+}
+
+/* .dados-de-contato li{
+  padding: top 5rem;
+
+} */
